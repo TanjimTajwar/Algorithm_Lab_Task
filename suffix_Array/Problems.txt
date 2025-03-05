@@ -1,0 +1,328 @@
+### **Problem 1: Construct Suffix Array**
+#### **Problem Statement:**  
+Given a string `S`, construct its suffix array.
+
+#### **Input:**  
+```
+banana
+```
+
+#### **Expected Output:**  
+```
+5 3 1 0 4 2
+```
+
+---
+
+### **Problem 2: Find the Lexicographically Smallest Suffix**
+#### **Problem Statement:**  
+Given a string `S`, find the lexicographically smallest suffix.
+
+#### **Input:**  
+```
+mississippi
+```
+
+#### **Expected Output:**  
+```
+i
+```
+
+---
+
+### **Problem 3: Find the Lexicographically Largest Suffix**
+#### **Problem Statement:**  
+Given a string `S`, find the lexicographically largest suffix.
+
+#### **Input:**  
+```
+algorithm
+```
+
+#### **Expected Output:**  
+```
+thm
+```
+
+---
+
+### **Problem 4: Count Distinct Substrings Using Suffix Array**
+#### **Problem Statement:**  
+Given a string `S`, count the number of distinct substrings.
+
+#### **Input:**  
+```
+ababa
+```
+
+#### **Expected Output:**  
+```
+5
+```
+
+---
+
+### **Problem 5: Longest Common Prefix (LCP) Array**
+#### **Problem Statement:**  
+Given a string `S`, construct its LCP array.
+
+#### **Input:**  
+```
+banana
+```
+
+#### **Expected Output:**  
+```
+1 3 0 0 2 0
+```
+
+---
+
+### **Problem 6: Find the K-th Lexicographical Substring**
+#### **Problem Statement:**  
+Given a string `S`, find the K-th lexicographically smallest substring.
+
+#### **Input:**  
+```
+S = "abc"
+K = 3
+```
+
+#### **Expected Output:**  
+```
+"b"
+```
+
+---
+
+### **Problem 7: Check if a Substring Exists**
+#### **Problem Statement:**  
+Given a string `S` and a substring `T`, check if `T` exists in `S` using a suffix array.
+
+#### **Input:**  
+```
+S = "abracadabra"
+T = "cad"
+```
+
+#### **Expected Output:**  
+```
+YES
+```
+
+---
+
+### **Problem 8: Find the Lexicographically Largest Rotation**
+#### **Problem Statement:**  
+Given a string `S`, find the lexicographically largest cyclic rotation.
+
+#### **Input:**  
+```
+robot
+```
+
+#### **Expected Output:**  
+```
+trob
+```
+
+---
+
+### **Problem 9: Find the Longest Repeated Substring**
+#### **Problem Statement:**  
+Given a string `S`, find the longest repeated substring.
+
+#### **Input:**  
+```
+mississippi
+```
+
+#### **Expected Output:**  
+```
+issi
+```
+
+---
+
+### **Problem 10: Find the Shortest Unique Substring**
+#### **Problem Statement:**  
+Given a string `S`, find the shortest substring that is unique.
+
+#### **Input:**  
+```
+banana
+```
+
+#### **Expected Output:**  
+```
+b
+```
+
+---
+
+### **Problem 11: Find the Most Frequent Substring**
+#### **Problem Statement:**  
+Given a string `S`, find the most frequently occurring substring.
+
+#### **Input:**  
+```
+aabaaaab
+```
+
+#### **Expected Output:**  
+```
+"a"
+```
+
+---
+
+### **Problem 12: Find the K-th Smallest Rotation**
+#### **Problem Statement:**  
+Given a string `S`, find the K-th lexicographically smallest cyclic rotation.
+
+#### **Input:**  
+```
+S = "abcd"
+K = 2
+```
+
+#### **Expected Output:**  
+```
+"bcda"
+```
+
+---
+
+### **Problem 13: Find the Number of Palindromic Substrings**
+#### **Problem Statement:**  
+Given a string `S`, count the number of palindromic substrings.
+
+#### **Input:**  
+```
+aba
+```
+
+#### **Expected Output:**  
+```
+4
+```
+
+---
+
+### **Problem 14: Count Substrings That Appear At Least K Times**
+#### **Problem Statement:**  
+Given a string `S`, count the number of substrings that appear at least `K` times.
+
+#### **Input:**  
+```
+S = "ababab"
+K = 2
+```
+
+#### **Expected Output:**  
+```
+10
+```
+
+---
+
+### **Problem 15: Find the K-th Smallest Suffix**
+#### **Problem Statement:**  
+Given a string `S`, find the K-th lexicographically smallest suffix.
+
+#### **Input:**  
+```
+S = "hello"
+K = 3
+```
+
+#### **Expected Output:**  
+```
+"lo"
+```
+
+---
+
+### **Problem 16: Find the Smallest Rotation of a String**
+#### **Problem Statement:**  
+Given a string `S`, find the smallest lexicographical rotation of `S`.
+
+#### **Input:**  
+```
+bcda
+```
+
+#### **Expected Output:**  
+```
+abcd
+```
+
+---
+
+### **Problem 17: Find the Longest Common Substring Between Two Strings**
+#### **Problem Statement:**  
+Given two strings `S1` and `S2`, find the longest common substring.
+
+#### **Input:**  
+```
+S1 = "banana"
+S2 = "ananas"
+```
+
+#### **Expected Output:**  
+```
+"ana"
+```
+
+---
+
+### **Problem 18: Find the Longest Prefix That Appears More Than Once**
+#### **Problem Statement:**  
+Given a string `S`, find the longest prefix that appears at least twice.
+
+#### **Input:**  
+```
+abcabcabc
+```
+
+#### **Expected Output:**  
+```
+"abcabc"
+```
+
+---
+
+### **Problem 19: Find the Minimum Length Unique Substring**
+#### **Problem Statement:**  
+Given a string `S`, find the shortest substring that appears only once.
+
+#### **Input:**  
+```
+aaab
+```
+
+#### **Expected Output:**  
+```
+"b"
+```
+
+---
+
+### **Problem 20: Find the Number of Unique Substrings of Length K**
+#### **Problem Statement:**  
+Given a string `S` and an integer `K`, find the number of unique substrings of length `K`.
+
+#### **Input:**  
+```
+S = "abcabc"
+K = 2
+```
+
+#### **Expected Output:**  
+```
+5
+```
+
+---
+
+These problems cover a variety of topics related to **Suffix Arrays**, **LCP Arrays**, **Distinct Substrings**, and **Substring Searching**. Let me know if you need explanations or solutions for any of them! 🚀

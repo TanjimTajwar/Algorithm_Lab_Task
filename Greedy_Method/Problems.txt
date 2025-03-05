@@ -1,0 +1,352 @@
+### **Problem 1: Activity Selection Problem**  
+#### **Problem Statement:**  
+Given `n` activities with start and end times, select the maximum number of non-overlapping activities.
+
+#### **Input:**  
+```
+5  
+1 3  
+2 5  
+4 6  
+6 8  
+5 9  
+```
+
+#### **Expected Output:**  
+```
+Max Activities: 3  
+Selected Activities: (1,3), (4,6), (6,8)
+```
+
+---
+
+### **Problem 2: Fractional Knapsack**  
+#### **Problem Statement:**  
+Given `n` items with weight and value, maximize value within weight limit `W`.
+
+#### **Input:**  
+```
+3 50  
+60 10  
+100 20  
+120 30  
+```
+
+#### **Expected Output:**  
+```
+Max Value: 240.0
+```
+
+---
+
+### **Problem 3: Huffman Encoding**  
+#### **Problem Statement:**  
+Given `n` characters with frequencies, construct Huffman Tree.
+
+#### **Input:**  
+```
+4  
+A 5  
+B 9  
+C 12  
+D 13  
+```
+
+#### **Expected Output:**  
+```
+Huffman Code:  
+A: 110  
+B: 10  
+C: 0  
+D: 111
+```
+
+---
+
+### **Problem 4: Job Sequencing with Deadline**  
+#### **Problem Statement:**  
+Find the max profit by scheduling jobs within given deadlines.
+
+#### **Input:**  
+```
+4  
+A 4 20  
+B 1 10  
+C 1 40  
+D 1 30  
+```
+
+#### **Expected Output:**  
+```
+Max Profit: 60  
+Selected Jobs: C, A
+```
+
+---
+
+### **Problem 5: Minimum Number of Coins**  
+#### **Problem Statement:**  
+Find the minimum number of coins needed for an amount.
+
+#### **Input:**  
+```
+Amount: 93  
+Coins: [1, 5, 10, 20, 50]
+```
+
+#### **Expected Output:**  
+```
+Coins Used: [50, 20, 20, 1, 1, 1]
+Total Coins: 6
+```
+
+---
+
+### **Problem 6: Minimum Cost to Connect Ropes**  
+#### **Problem Statement:**  
+Find the minimum cost to connect `n` ropes.
+
+#### **Input:**  
+```
+4  
+4 3 2 6  
+```
+
+#### **Expected Output:**  
+```
+Min Cost: 29
+```
+
+---
+
+### **Problem 7: Largest Number from Given Digits**  
+#### **Problem Statement:**  
+Arrange numbers to form the largest possible number.
+
+#### **Input:**  
+```
+[3, 30, 34, 5, 9]
+```
+
+#### **Expected Output:**  
+```
+Largest Number: 9534330
+```
+
+---
+
+### **Problem 8: Maximize Sum after K Negations**  
+#### **Problem Statement:**  
+Negate at most `K` numbers to maximize sum.
+
+#### **Input:**  
+```
+Array: [-2, 0, 5, -1, 2]  
+K: 3  
+```
+
+#### **Expected Output:**  
+```
+Max Sum: 10
+```
+
+---
+
+### **Problem 9: Minimum Platforms Needed**  
+#### **Problem Statement:**  
+Find the minimum number of platforms required for a railway station.
+
+#### **Input:**  
+```
+Arrivals: [900, 940, 950, 1100, 1500, 1800]  
+Departures: [910, 1200, 1120, 1130, 1900, 2000]
+```
+
+#### **Expected Output:**  
+```
+Minimum Platforms: 3
+```
+
+---
+
+### **Problem 10: Maximum Product Subset**  
+#### **Problem Statement:**  
+Find the maximum product possible from an array subset.
+
+#### **Input:**  
+```
+[-1, -3, -10, 0, 60]
+```
+
+#### **Expected Output:**  
+```
+Max Product: 1800
+```
+
+---
+
+### **Problem 11: Maximum Difference of Zero-One Subarray**  
+#### **Problem Statement:**  
+Find max difference between count of `0s` and `1s` in a binary array.
+
+#### **Input:**  
+```
+[1, 0, 0, 1, 0, 1, 0, 1, 1]
+```
+
+#### **Expected Output:**  
+```
+Max Difference: 2
+```
+
+---
+
+### **Problem 12: Gas Station Problem**  
+#### **Problem Statement:**  
+Find the starting gas station from which a circular tour is possible.
+
+#### **Input:**  
+```
+Gas: [4, 6, 7, 4]  
+Cost: [6, 5, 3, 5]
+```
+
+#### **Expected Output:**  
+```
+Start at Station: 1
+```
+
+---
+
+### **Problem 13: Police and Thieves Problem**  
+#### **Problem Statement:**  
+Find max thieves caught by `k` police officers.
+
+#### **Input:**  
+```
+[ 'P', 'T', 'T', 'P', 'T' ]  
+K = 2
+```
+
+#### **Expected Output:**  
+```
+Max Thieves Caught: 2
+```
+
+---
+
+### **Problem 14: Minimum Swaps to Bring Elements Together**  
+#### **Problem Statement:**  
+Find minimum swaps to bring all elements ≤ `k` together.
+
+#### **Input:**  
+```
+[2, 1, 5, 6, 3]  
+K = 3
+```
+
+#### **Expected Output:**  
+```
+Min Swaps: 1
+```
+
+---
+
+### **Problem 15: Assign Mice to Holes**  
+#### **Problem Statement:**  
+Find the minimum time required to assign `n` mice to `n` holes.
+
+#### **Input:**  
+```
+Mice: [4, -4, 2]  
+Holes: [4, 0, 5]
+```
+
+#### **Expected Output:**  
+```
+Min Time: 4
+```
+
+---
+
+### **Problem 16: Assign Tasks to Workers**  
+#### **Problem Statement:**  
+Assign tasks to workers to minimize max completion time.
+
+#### **Input:**  
+```
+Tasks: [4, 2, 8, 1, 5, 3]  
+Workers: 3
+```
+
+#### **Expected Output:**  
+```
+Max Time: 8
+```
+
+---
+
+### **Problem 17: Buy Maximum Stocks in K Days**  
+#### **Problem Statement:**  
+Buy max stocks in `K` days.
+
+#### **Input:**  
+```
+Stock Prices: [10, 7, 19]  
+K = 45
+```
+
+#### **Expected Output:**  
+```
+Max Stocks Bought: 4
+```
+
+---
+
+### **Problem 18: Rearrange Characters to Avoid Repeating Adjacent Ones**  
+#### **Problem Statement:**  
+Rearrange characters in a string such that no two adjacent are the same.
+
+#### **Input:**  
+```
+"aab"
+```
+
+#### **Expected Output:**  
+```
+"aba"
+```
+
+---
+
+### **Problem 19: Shortest Job First (SJF) Scheduling**  
+#### **Problem Statement:**  
+Find minimum average waiting time.
+
+#### **Input:**  
+```
+Processes: [3, 6, 1, 7, 2]
+```
+
+#### **Expected Output:**  
+```
+Min Avg Waiting Time: 4.2
+```
+
+---
+
+### **Problem 20: Maximize Array Sum after M Increments**  
+#### **Problem Statement:**  
+Increment `M` elements to maximize sum.
+
+#### **Input:**  
+```
+Array: [1, 3, 2, 5]  
+M = 2
+```
+
+#### **Expected Output:**  
+```
+Max Sum: 13
+```
+

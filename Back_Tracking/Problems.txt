@@ -1,0 +1,284 @@
+### **Problem 1: N-Queens Problem**  
+#### **Problem Statement:**  
+Place N queens on an N×N chessboard such that no two queens attack each other.
+
+#### **Input:**  
+```
+N = 4
+```
+
+#### **Expected Output:**  
+```
+Solutions:
+[
+ [". Q . .", ". . . Q", "Q . . .", ". . Q ."],
+ [". . Q .", "Q . . .", ". . . Q", ". Q . ."]
+]
+```
+
+---
+
+### **Problem 2: Sudoku Solver**  
+#### **Problem Statement:**  
+Solve a given 9×9 Sudoku puzzle.
+
+#### **Input:**  
+```
+Grid:
+[[5,3,0,0,7,0,0,0,0],
+ [6,0,0,1,9,5,0,0,0],
+ [0,9,8,0,0,0,0,6,0],
+ [8,0,0,0,6,0,0,0,3],
+ [4,0,0,8,0,3,0,0,1],
+ [7,0,0,0,2,0,0,0,6],
+ [0,6,0,0,0,0,2,8,0],
+ [0,0,0,4,1,9,0,0,5],
+ [0,0,0,0,8,0,0,7,9]]
+```
+
+#### **Expected Output:**  
+```
+Solved Grid:
+[[5,3,4,6,7,8,9,1,2],
+ [6,7,2,1,9,5,3,4,8],
+ [1,9,8,3,4,2,5,6,7],
+ [8,5,9,7,6,1,4,2,3],
+ [4,2,6,8,5,3,7,9,1],
+ [7,1,3,9,2,4,8,5,6],
+ [9,6,1,5,3,7,2,8,4],
+ [2,8,7,4,1,9,6,3,5],
+ [3,4,5,2,8,6,1,7,9]]
+```
+
+---
+
+### **Problem 3: Word Search Puzzle**  
+#### **Problem Statement:**  
+Find if a word exists in a given grid by moving horizontally or vertically.
+
+#### **Input:**  
+```
+Grid:
+[['A', 'B', 'C', 'E'],
+ ['S', 'F', 'C', 'S'],
+ ['A', 'D', 'E', 'E']]
+Word: "SEE"
+```
+
+#### **Expected Output:**  
+```
+True (Word found)
+```
+
+---
+
+### **Problem 4: Rat in a Maze**  
+#### **Problem Statement:**  
+Find a path from the top-left to the bottom-right corner in a maze.
+
+#### **Input:**  
+```
+Maze:
+[[1, 0, 0, 0],
+ [1, 1, 0, 1],
+ [0, 1, 0, 0],
+ [1, 1, 1, 1]]
+```
+
+#### **Expected Output:**  
+```
+Path:
+[[1, 0, 0, 0],
+ [1, 1, 0, 0],
+ [0, 1, 0, 0],
+ [0, 1, 1, 1]]
+```
+
+---
+
+### **Problem 5: Knight’s Tour Problem**  
+#### **Problem Statement:**  
+Find a sequence of moves such that the knight visits every square exactly once.
+
+#### **Input:**  
+```
+N = 5
+```
+
+#### **Expected Output:**  
+```
+A valid knight's tour path.
+```
+
+---
+
+### **Problem 6: Tug of War**  
+#### **Problem Statement:**  
+Partition an array into two subsets with minimal difference in sum.
+
+#### **Input:**  
+```
+Arr = [1, 2, 3, 4, 5]
+```
+
+#### **Expected Output:**  
+```
+Subset 1: [1, 4, 5], Subset 2: [2, 3], Difference: 1
+```
+
+---
+
+### **Problem 7: Subset Sum Problem**  
+#### **Problem Statement:**  
+Check if a subset exists with a given sum.
+
+#### **Input:**  
+```
+Arr = [3, 34, 4, 12, 5, 2]
+Sum = 9
+```
+
+#### **Expected Output:**  
+```
+True (Subset [4, 5] exists)
+```
+
+---
+
+### **Problem 8: Combination Sum**  
+#### **Problem Statement:**  
+Find all unique combinations that sum to a given number.
+
+#### **Input:**  
+```
+Arr = [2, 3, 6, 7]
+Target = 7
+```
+
+#### **Expected Output:**  
+```
+[[2, 2, 3], [7]]
+```
+
+---
+
+### **Problem 9: Hamiltonian Path in a Graph**  
+#### **Problem Statement:**  
+Find a path that visits every vertex exactly once.
+
+#### **Input:**  
+```
+Graph:
+[[0, 1, 0, 1, 0],
+ [1, 0, 1, 1, 1],
+ [0, 1, 0, 0, 1],
+ [1, 1, 0, 0, 1],
+ [0, 1, 1, 1, 0]]
+```
+
+#### **Expected Output:**  
+```
+Path exists.
+```
+
+---
+
+### **Problem 10: Graph Coloring**  
+#### **Problem Statement:**  
+Color a graph with minimum colors such that no adjacent nodes share the same color.
+
+#### **Input:**  
+```
+Graph:
+[[0, 1, 1, 1],
+ [1, 0, 1, 0],
+ [1, 1, 0, 1],
+ [1, 0, 1, 0]]
+Colors = 3
+```
+
+#### **Expected Output:**  
+```
+Valid coloring exists.
+```
+
+---
+
+### **Problem 11: Generate All Parentheses**  
+#### **Problem Statement:**  
+Generate all valid parenthesis combinations for N pairs.
+
+#### **Input:**  
+```
+N = 3
+```
+
+#### **Expected Output:**  
+```
+["((()))", "(()())", "(())()", "()(())", "()()()"]
+```
+
+---
+
+### **Problem 12: String Permutations**  
+#### **Problem Statement:**  
+Generate all permutations of a given string.
+
+#### **Input:**  
+```
+String = "ABC"
+```
+
+#### **Expected Output:**  
+```
+["ABC", "ACB", "BAC", "BCA", "CAB", "CBA"]
+```
+
+---
+
+### **Problem 13: Palindrome Partitioning**  
+#### **Problem Statement:**  
+Partition a string into all possible palindrome substrings.
+
+#### **Input:**  
+```
+String = "aab"
+```
+
+#### **Expected Output:**  
+```
+[["a", "a", "b"], ["aa", "b"]]
+```
+
+---
+
+### **Problem 14: Find All Subsets**  
+#### **Problem Statement:**  
+Generate all subsets of a given set.
+
+#### **Input:**  
+```
+Set = [1, 2, 3]
+```
+
+#### **Expected Output:**  
+```
+[[], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3]]
+```
+
+---
+
+### **Problem 15: Josephus Problem**  
+#### **Problem Statement:**  
+Find the last person remaining after every Kth person is eliminated.
+
+#### **Input:**  
+```
+N = 7, K = 3
+```
+
+#### **Expected Output:**  
+```
+Winner: 4
+```
+

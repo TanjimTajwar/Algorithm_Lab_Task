@@ -1,0 +1,332 @@
+Here are **20 problems** based on the **Divide and Conquer** approach, each with input and expected output.
+
+---
+
+### **Problem 1: Merge Sort**  
+#### **Problem Statement:**  
+Sort an array using Merge Sort.
+
+#### **Input:**  
+```
+[38, 27, 43, 3, 9, 82, 10]
+```
+
+#### **Expected Output:**  
+```
+Sorted Array: [3, 9, 10, 27, 38, 43, 82]
+```
+
+---
+
+### **Problem 2: Quick Sort**  
+#### **Problem Statement:**  
+Sort an array using Quick Sort.
+
+#### **Input:**  
+```
+[10, 7, 8, 9, 1, 5]
+```
+
+#### **Expected Output:**  
+```
+Sorted Array: [1, 5, 7, 8, 9, 10]
+```
+
+---
+
+### **Problem 3: Binary Search**  
+#### **Problem Statement:**  
+Find an element in a sorted array using Binary Search.
+
+#### **Input:**  
+```
+Array: [2, 3, 4, 10, 40]  
+Search Key: 10
+```
+
+#### **Expected Output:**  
+```
+Element found at index: 3
+```
+
+---
+
+### **Problem 4: Closest Pair of Points**  
+#### **Problem Statement:**  
+Find the closest pair of points in a 2D plane.
+
+#### **Input:**  
+```
+Points: [(2,3), (12,30), (40,50), (5,1), (12,10)]
+```
+
+#### **Expected Output:**  
+```
+Minimum Distance: 2.24
+```
+
+---
+
+### **Problem 5: Maximum Subarray Sum (Kadane's Algorithm Alternative)**  
+#### **Problem Statement:**  
+Find the contiguous subarray with the maximum sum.
+
+#### **Input:**  
+```
+[-2,1,-3,4,-1,2,1,-5,4]
+```
+
+#### **Expected Output:**  
+```
+Max Sum: 6
+Subarray: [4,-1,2,1]
+```
+
+---
+
+### **Problem 6: Matrix Multiplication (Strassen’s Algorithm)**  
+#### **Problem Statement:**  
+Multiply two matrices using Strassen’s Algorithm.
+
+#### **Input:**  
+```
+Matrix A: [[1,2], [3,4]]  
+Matrix B: [[5,6], [7,8]]
+```
+
+#### **Expected Output:**  
+```
+Result Matrix: [[19, 22], [43, 50]]
+```
+
+---
+
+### **Problem 7: Finding the Median of Two Sorted Arrays**  
+#### **Problem Statement:**  
+Find the median of two sorted arrays.
+
+#### **Input:**  
+```
+A = [1, 3, 8]  
+B = [7, 9, 10, 11]
+```
+
+#### **Expected Output:**  
+```
+Median: 8
+```
+
+---
+
+### **Problem 8: Count Inversions in an Array**  
+#### **Problem Statement:**  
+Count inversions (pairs where `A[i] > A[j]` for `i < j`).
+
+#### **Input:**  
+```
+[8, 4, 2, 1]
+```
+
+#### **Expected Output:**  
+```
+Inversions Count: 6
+```
+
+---
+
+### **Problem 9: Find the k-th Smallest Element**  
+#### **Problem Statement:**  
+Find the k-th smallest element in an array.
+
+#### **Input:**  
+```
+Array: [7, 10, 4, 3, 20, 15]  
+K = 3
+```
+
+#### **Expected Output:**  
+```
+K-th Smallest: 7
+```
+
+---
+
+### **Problem 10: Find the Majority Element**  
+#### **Problem Statement:**  
+Find the element that appears more than `n/2` times.
+
+#### **Input:**  
+```
+[2,2,1,1,1,2,2]
+```
+
+#### **Expected Output:**  
+```
+Majority Element: 2
+```
+
+---
+
+### **Problem 11: Skyline Problem**  
+#### **Problem Statement:**  
+Find the skyline silhouette from given buildings.
+
+#### **Input:**  
+```
+Buildings: [[2, 9, 10], [3, 7, 15], [5, 12, 12]]
+```
+
+#### **Expected Output:**  
+```
+Skyline: [[2,10], [3,15], [7,12], [12,0]]
+```
+
+---
+
+### **Problem 12: Find Peak Element in an Array**  
+#### **Problem Statement:**  
+Find an index where `A[i] > A[i-1]` and `A[i] > A[i+1]`.
+
+#### **Input:**  
+```
+[1, 3, 20, 4, 1, 0]
+```
+
+#### **Expected Output:**  
+```
+Peak Element Index: 2
+```
+
+---
+
+### **Problem 13: Fast Exponentiation (Power Calculation)**  
+#### **Problem Statement:**  
+Find `x^n` using divide and conquer.
+
+#### **Input:**  
+```
+x = 2, n = 10
+```
+
+#### **Expected Output:**  
+```
+Result: 1024
+```
+
+---
+
+### **Problem 14: Median in a Stream of Integers**  
+#### **Problem Statement:**  
+Find median dynamically as elements arrive.
+
+#### **Input:**  
+```
+[5, 15, 1, 3]
+```
+
+#### **Expected Output:**  
+```
+Medians: [5, 10, 5, 4]
+```
+
+---
+
+### **Problem 15: Find Missing Number in an Array**  
+#### **Problem Statement:**  
+Find missing number in `1` to `n`.
+
+#### **Input:**  
+```
+[1, 2, 4, 5, 6]
+```
+
+#### **Expected Output:**  
+```
+Missing Number: 3
+```
+
+---
+
+### **Problem 16: Count the Number of Ones in a Sorted Binary Array**  
+#### **Problem Statement:**  
+Find count of `1s` in a sorted array.
+
+#### **Input:**  
+```
+[0, 0, 0, 1, 1, 1, 1]
+```
+
+#### **Expected Output:**  
+```
+Count of 1s: 4
+```
+
+---
+
+### **Problem 17: Sum of Digits Using Divide and Conquer**  
+#### **Problem Statement:**  
+Find sum of digits of a number.
+
+#### **Input:**  
+```
+Number: 12345
+```
+
+#### **Expected Output:**  
+```
+Sum: 15
+```
+
+---
+
+### **Problem 18: Find Maximum Difference in an Array**  
+#### **Problem Statement:**  
+Find maximum difference `A[j] - A[i]` where `j > i`.
+
+#### **Input:**  
+```
+[2, 3, 10, 6, 4, 8, 1]
+```
+
+#### **Expected Output:**  
+```
+Max Difference: 8
+```
+
+---
+
+### **Problem 19: Find the Smallest Missing Positive Number**  
+#### **Problem Statement:**  
+Find the smallest missing positive number.
+
+#### **Input:**  
+```
+[3, 4, -1, 1]
+```
+
+#### **Expected Output:**  
+```
+Smallest Missing: 2
+```
+
+---
+
+### **Problem 20: Tower of Hanoi**  
+#### **Problem Statement:**  
+Solve Tower of Hanoi problem for `n` disks.
+
+#### **Input:**  
+```
+n = 3
+```
+
+#### **Expected Output:**  
+```
+Move disk 1 from A to C  
+Move disk 2 from A to B  
+Move disk 1 from C to B  
+Move disk 3 from A to C  
+Move disk 1 from B to A  
+Move disk 2 from B to C  
+Move disk 1 from A to C  
+```

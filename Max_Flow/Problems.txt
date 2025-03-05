@@ -1,0 +1,378 @@
+### **Problem 1: Find Maximum Flow in a Simple Graph**  
+#### **Problem Statement:**  
+Given a directed graph with capacities, find the maximum flow from source `s` to sink `t`.
+
+#### **Input:**  
+```
+4 5  
+1 2 3  
+1 3 2  
+2 3 1  
+2 4 2  
+3 4 4  
+s = 1, t = 4
+```
+
+#### **Expected Output:**  
+```
+Max Flow: 4
+```
+
+---
+
+### **Problem 2: Find Maximum Flow in a Bipartite Graph**  
+#### **Problem Statement:**  
+Given a bipartite graph, find the maximum number of matchings.
+
+#### **Input:**  
+```
+5 4  
+1 3 1  
+1 4 1  
+2 3 1  
+2 5 1  
+s = 1, t = 5
+```
+
+#### **Expected Output:**  
+```
+Max Flow: 2
+```
+
+---
+
+### **Problem 3: Find Minimum Cut using Max Flow**  
+#### **Problem Statement:**  
+Find the minimum cut that separates `s` and `t`.
+
+#### **Input:**  
+```
+4 5  
+1 2 3  
+1 3 2  
+2 3 1  
+2 4 2  
+3 4 4  
+s = 1, t = 4
+```
+
+#### **Expected Output:**  
+```
+Min Cut Edges: (2,4), (3,4)
+```
+
+---
+
+### **Problem 4: Find Maximum Flow with Parallel Edges**  
+#### **Problem Statement:**  
+Given a graph with parallel edges, find the max flow.
+
+#### **Input:**  
+```
+3 4  
+1 2 4  
+1 2 2  
+2 3 5  
+s = 1, t = 3
+```
+
+#### **Expected Output:**  
+```
+Max Flow: 6
+```
+
+---
+
+### **Problem 5: Maximum Flow in a Network with Back Edges**  
+#### **Problem Statement:**  
+Consider a network where some edges allow reverse flow. Find the max flow.
+
+#### **Input:**  
+```
+3 3  
+1 2 5  
+2 3 4  
+3 1 3  
+s = 1, t = 3
+```
+
+#### **Expected Output:**  
+```
+Max Flow: 5
+```
+
+---
+
+### **Problem 6: Find Maximum Flow in a Large Grid Network**  
+#### **Problem Statement:**  
+Find max flow in a grid-like structure.
+
+#### **Input:**  
+```
+5 6  
+1 2 2  
+1 3 3  
+2 4 1  
+3 4 2  
+3 5 4  
+4 5 2  
+s = 1, t = 5
+```
+
+#### **Expected Output:**  
+```
+Max Flow: 4
+```
+
+---
+
+### **Problem 7: Maximum Flow with Bottleneck Edge**  
+#### **Problem Statement:**  
+Find max flow when one edge limits the total flow.
+
+#### **Input:**  
+```
+4 4  
+1 2 10  
+2 3 2  
+3 4 10  
+s = 1, t = 4
+```
+
+#### **Expected Output:**  
+```
+Max Flow: 2
+```
+
+---
+
+### **Problem 8: Maximum Flow in a Tree Structure**  
+#### **Problem Statement:**  
+Find max flow in a tree-like graph.
+
+#### **Input:**  
+```
+5 4  
+1 2 5  
+1 3 10  
+2 4 3  
+3 5 4  
+s = 1, t = 5
+```
+
+#### **Expected Output:**  
+```
+Max Flow: 4
+```
+
+---
+
+### **Problem 9: Maximum Flow with Multiple Sources and Sinks**  
+#### **Problem Statement:**  
+Find max flow when there are multiple sources and sinks.
+
+#### **Input:**  
+```
+6 7  
+1 3 5  
+1 4 10  
+2 3 4  
+2 5 6  
+3 6 7  
+4 6 5  
+5 6 4  
+s = {1,2}, t = {6}
+```
+
+#### **Expected Output:**  
+```
+Max Flow: 11
+```
+
+---
+
+### **Problem 10: Minimum Edge Deletion to Disconnect s from t**  
+#### **Problem Statement:**  
+Find the fewest edges to remove to make `t` unreachable from `s`.
+
+#### **Input:**  
+```
+4 5  
+1 2 3  
+1 3 2  
+2 3 1  
+2 4 2  
+3 4 4  
+s = 1, t = 4
+```
+
+#### **Expected Output:**  
+```
+Edges to Remove: (2,4), (3,4)
+```
+
+---
+
+### **Problem 11: Check If Maximum Flow is Unique**  
+#### **Problem Statement:**  
+Check if there are multiple valid maximum flows.
+
+#### **Input:**  
+```
+3 3  
+1 2 5  
+2 3 5  
+s = 1, t = 3
+```
+
+#### **Expected Output:**  
+```
+Multiple Max Flows: NO
+```
+
+---
+
+### **Problem 12: Find a Maximum Flow Augmenting Path**  
+#### **Problem Statement:**  
+Find an augmenting path for maximum flow.
+
+#### **Input:**  
+```
+4 4  
+1 2 4  
+2 3 3  
+3 4 5  
+s = 1, t = 4
+```
+
+#### **Expected Output:**  
+```
+Augmenting Path: 1 → 2 → 3 → 4
+```
+
+---
+
+### **Problem 13: Maximum Flow in a Graph with Loops**  
+#### **Problem Statement:**  
+Find max flow in a graph where nodes have self-loops.
+
+#### **Input:**  
+```
+4 5  
+1 2 3  
+2 2 2  
+2 3 4  
+3 4 5  
+s = 1, t = 4
+```
+
+#### **Expected Output:**  
+```
+Max Flow: 3
+```
+
+---
+
+### **Problem 14: Find Maximum Flow When Edge Capacities Increase**  
+#### **Problem Statement:**  
+Find the max flow when an edge’s capacity increases.
+
+#### **Input:**  
+```
+3 3  
+1 2 5  
+2 3 3  
+s = 1, t = 3
+New Edge Capacity: (2,3) → 6
+```
+
+#### **Expected Output:**  
+```
+Max Flow: 6
+```
+
+---
+
+### **Problem 15: Check If a Flow Assignment is Valid**  
+#### **Problem Statement:**  
+Given a flow assignment, check if it satisfies flow constraints.
+
+#### **Input:**  
+```
+Graph: 
+1 → 2 (Capacity: 5, Flow: 3)  
+2 → 3 (Capacity: 4, Flow: 3)  
+s = 1, t = 3
+```
+
+#### **Expected Output:**  
+```
+Valid Flow: YES
+```
+
+---
+
+### **Problem 16: Compute Maximum Flow in a Directed Acyclic Graph (DAG)**  
+#### **Problem Statement:**  
+Find max flow in a DAG.
+
+#### **Input:**  
+```
+5 6  
+1 2 5  
+1 3 4  
+2 4 3  
+3 4 2  
+3 5 6  
+4 5 4  
+s = 1, t = 5
+```
+
+#### **Expected Output:**  
+```
+Max Flow: 6
+```
+
+---
+
+### **Problem 17: Find Maximum Bipartite Matching Using Flow**  
+#### **Problem Statement:**  
+Find max matching in a bipartite graph.
+
+#### **Input:**  
+```
+3 3  
+1 4 1  
+2 5 1  
+3 6 1  
+s = 1, t = 6
+```
+
+#### **Expected Output:**  
+```
+Max Matching: 3
+```
+
+---
+
+### **Problem 18: Compute Maximum Flow in a Graph with Zero-Capacity Edges**  
+#### **Problem Statement:**  
+Find max flow when some edges have zero capacity.
+
+#### **Input:**  
+```
+4 4  
+1 2 5  
+2 3 0  
+3 4 4  
+s = 1, t = 4
+```
+
+#### **Expected Output:**  
+```
+Max Flow: 0
+```
+
+---
+
+These problems cover **Ford-Fulkerson**, **Edmonds-Karp**, **Dinic's Algorithm**, **Bipartite Matching**, and **Minimum Cut**. Let me know if you need solutions! 🚀
