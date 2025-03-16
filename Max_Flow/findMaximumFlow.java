@@ -2,7 +2,7 @@ package Max_Flow;
 
 import java.util.*; // Import required libraries
 
-class findMaximumFlow {
+public class findMaximumFlow {
     private static final int INF = Integer.MAX_VALUE; // Define infinity as the maximum integer value
     private int vertices; // Number of vertices in the graph
     private int[][] capacity; // Adjacency matrix for storing capacities
@@ -73,7 +73,7 @@ class findMaximumFlow {
 
     public static void main(String[] args) {
         int vertices = 4; // Number of vertices in the graph
-        findMaximumFlow graph = new findMaximumFlow(vertices); // Create a MaxFlow object
+        MaxFlow graph = new MaxFlow(vertices); // Create a MaxFlow object
 
         // Add edges with their capacities
         graph.addEdge(0, 1, 3);
