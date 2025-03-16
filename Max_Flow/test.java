@@ -14,7 +14,7 @@ public class test {
     }
 
     public static void main(String[] CSECU) {
-        int v = 9; // Fix: Changed from 8 to 9 to include node 8
+        int v = 9;
 
         ArrayList<Edge> graph[] = new ArrayList[v];
 
@@ -38,7 +38,7 @@ public class test {
         graph[2].add(new Edge(2, 4, 1));
 
         graph[4].add(new Edge(4, 2, 1));
-        graph[4].add(new Edge(4, 8, 1)); // Fix: graph[8] now exists because v = 9
+        graph[4].add(new Edge(4, 8, 1)); 
 
         graph[5].add(new Edge(5, 2, 1));
         graph[5].add(new Edge(5, 8, 1));
@@ -48,7 +48,7 @@ public class test {
 
         graph[7].add(new Edge(7, 6, 1));
 
-        graph[8].add(new Edge(8, 4, 1)); // Fix: graph[8] now exists
+        graph[8].add(new Edge(8, 4, 1)); 
         graph[8].add(new Edge(8, 5, 1));
     }
 

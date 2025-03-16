@@ -73,7 +73,7 @@ class findMaximumFlow {
 
     public static void main(String[] args) {
         int vertices = 4; // Number of vertices in the graph
-        MaxFlow graph = new MaxFlow(vertices); // Create a MaxFlow object
+        findMaximumFlow graph = new findMaximumFlow(vertices); // Create a MaxFlow object
 
         // Add edges with their capacities
         graph.addEdge(0, 1, 3);
