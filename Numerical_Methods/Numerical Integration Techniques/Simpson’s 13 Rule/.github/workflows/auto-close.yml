@@ -1,0 +1,52 @@
+name: Auto Close
+
+on:
+  issues:
+    types: [labeled]
+  pull_request:
+    types: [labeled]
+
+jobs:
+  auto-close:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.issue;
+            const labels = context.payload.issue?.labels || context.payload.pull_request?.labels || [];
+            
+            // Check for close labels
+            const closeLabels = ['wontfix', 'duplicate', 'invalid', 'resolved'];
+            const hasCloseLabel = closeLabels.some(label =>
+              labels.some(l => l.name === label)
+            );
+            
+            if (hasCloseLabel) {
+              // Get label that triggered close
+              const closeLabel = labels.find(l => closeLabels.includes(l.name)).name;
+              
+              // Add comment
+              const comment = {
+                'wontfix': 'This issue will not be fixed as it is out of scope.',
+                'duplicate': 'This issue is a duplicate of another issue.',
+                'invalid': 'This issue is not valid or cannot be reproduced.',
+                'resolved': 'This issue has been resolved.'
+              }[closeLabel];
+              
+              github.rest.issues.createComment({
+                owner: issue.owner,
+                repo: issue.repo,
+                issue_number: issue.number,
+                body: comment
+              });
+              
+              // Close issue/PR
+              github.rest.issues.update({
+                owner: issue.owner,
+                repo: issue.repo,
+                issue_number: issue.number,
+                state: 'closed'
+              });
+            } 

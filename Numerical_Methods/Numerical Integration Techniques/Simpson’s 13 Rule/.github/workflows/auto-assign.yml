@@ -1,0 +1,41 @@
+name: Auto Assign
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+
+jobs:
+  auto-assign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.issue;
+            const isPR = context.payload.pull_request !== undefined;
+            
+            // Get repository maintainers
+            const maintainers = ['maintainer1', 'maintainer2', 'maintainer3'];
+            
+            // Assign random maintainer
+            const randomMaintainer = maintainers[Math.floor(Math.random() * maintainers.length)];
+            
+            // Add assignee
+            github.rest.issues.addAssignees({
+              owner: issue.owner,
+              repo: issue.repo,
+              issue_number: issue.number,
+              assignees: [randomMaintainer]
+            });
+            
+            // Add comment
+            const type = isPR ? 'pull request' : 'issue';
+            github.rest.issues.createComment({
+              owner: issue.owner,
+              repo: issue.repo,
+              issue_number: issue.number,
+              body: `Thank you for opening this ${type}! I've assigned @${randomMaintainer} to help you.`
+            }); 

@@ -1,0 +1,84 @@
+name: Auto Comment
+
+on:
+  issues:
+    types: [opened, edited]
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  auto-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.issue;
+            const title = context.payload.issue?.title || context.payload.pull_request?.title || '';
+            const body = context.payload.issue?.body || context.payload.pull_request?.body || '';
+            const isPR = context.payload.pull_request !== undefined;
+            
+            // Define comment templates
+            const commentTemplates = {
+              'bug': `Thank you for reporting this bug! Please provide the following information to help us fix it:
+1. Steps to reproduce
+2. Expected behavior
+3. Actual behavior
+4. Environment details
+5. Any error messages or logs`,
+              
+              'feature': `Thank you for suggesting this feature! Please provide the following information:
+1. Use case
+2. Expected behavior
+3. Any alternatives you've considered
+4. Additional context`,
+              
+              'question': `Thank you for your question! Please provide more details about:
+1. What you're trying to achieve
+2. What you've tried so far
+3. Any error messages or unexpected behavior
+4. Your environment details`,
+              
+              'security': `Thank you for reporting this security issue! Please note:
+1. This is a sensitive matter
+2. We will review it promptly
+3. Please do not disclose details publicly
+4. We will contact you privately if needed`,
+              
+              'documentation': `Thank you for your documentation suggestion! Please provide:
+1. What needs to be documented
+2. Why it's important
+3. Any specific examples or use cases
+4. Your suggested content`
+            };
+            
+            // Check title and body for patterns
+            const text = (title + ' ' + body).toLowerCase();
+            
+            // Add appropriate comment
+            for (const [type, template] of Object.entries(commentTemplates)) {
+              if (text.includes(type)) {
+                github.rest.issues.createComment({
+                  owner: issue.owner,
+                  repo: issue.repo,
+                  issue_number: issue.number,
+                  body: template
+                });
+                break;
+              }
+            }
+            
+            // Add PR-specific comment
+            if (isPR) {
+              github.rest.issues.createComment({
+                owner: issue.owner,
+                repo: issue.repo,
+                issue_number: issue.number,
+                body: `Thank you for your pull request! Please ensure:
+1. All tests pass
+2. Code follows style guidelines
+3. Documentation is updated
+4. Changes are properly tested`
+              });
+            } 

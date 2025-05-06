@@ -1,0 +1,30 @@
+Weddle's Rule Programming Problems
+=================================
+
+1. Write a program to implement Weddle's Rule for numerical integration of the function f(x) = x^2 + 2x + 1 from x = 0 to x = 4 using 6 intervals.
+
+2. Create a program that uses Weddle's Rule to approximate the integral of f(x) = sin(x) from 0 to π/2. Compare the result with the exact value.
+
+3. Implement Weddle's Rule to find the area under the curve f(x) = e^x from x = 0 to x = 2. Use 12 intervals and calculate the error.
+
+4. Write a program that uses Weddle's Rule to compute the integral of f(x) = 1/(1 + x^2) from 0 to 1. Compare with the exact value (π/4).
+
+5. Create a program to implement Weddle's Rule for the function f(x) = ln(x) from x = 1 to x = 5. Use 18 intervals and calculate the percentage error.
+
+6. Write a program that uses Weddle's Rule to approximate the integral of f(x) = cos(x) from 0 to π. Compare with the exact value (0).
+
+7. Implement Weddle's Rule to find the area under the curve f(x) = x^3 + 2x^2 + 3x + 4 from x = -2 to x = 2. Use 24 intervals.
+
+8. Create a program that uses Weddle's Rule to compute the integral of f(x) = √(1 - x^2) from 0 to 1. Compare with the exact value (π/4).
+
+9. Write a program to implement Weddle's Rule for the function f(x) = tan(x) from 0 to π/4. Use 30 intervals and calculate the error.
+
+10. Create a program that uses Weddle's Rule to approximate the integral of f(x) = x^4 + 3x^2 + 2 from x = -1 to x = 1. Compare with the exact value.
+
+Note: For each problem, make sure to:
+- Implement the Weddle's Rule formula correctly
+- Handle the number of intervals properly (must be divisible by 6)
+- Calculate and display the error where applicable
+- Use appropriate data types for calculations
+- Include proper input validation
+- Document your code with comments 

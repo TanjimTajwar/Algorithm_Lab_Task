@@ -1,0 +1,33 @@
+Runge-Kutta Methods Problems in Numerical Analysis
+
+Problem 1:
+Solve the initial value problem y' = x + y, y(0) = 1 using the fourth-order Runge-Kutta method with h = 0.1 to find y(0.5).
+
+Problem 2:
+Use the second-order Runge-Kutta method to solve the differential equation y' = 2x - y, y(0) = 1. Take step size h = 0.2 and find y(1).
+
+Problem 3:
+Apply the fourth-order Runge-Kutta method to solve y' = y - x^2, y(0) = 0.5. Use h = 0.1 and compute y(0.3).
+
+Problem 4:
+Solve the differential equation y' = e^x - y, y(0) = 1 using the third-order Runge-Kutta method. Take h = 0.2 and find y(0.6).
+
+Problem 5:
+Use the fourth-order Runge-Kutta method to solve y' = sin(x) + cos(y), y(0) = 0. Take h = 0.1 and compute y(0.4).
+
+Problem 6:
+Apply the second-order Runge-Kutta method to solve y' = x^2 + y^2, y(0) = 1. Use h = 0.2 and find y(0.8).
+
+Problem 7:
+Solve the initial value problem y' = 2xy, y(0) = 1 using the fourth-order Runge-Kutta method. Take h = 0.1 and compute y(0.5).
+
+Problem 8:
+Use the third-order Runge-Kutta method to solve y' = y^2 - x, y(0) = 0.5. Take h = 0.2 and find y(0.6).
+
+Problem 9:
+Apply the fourth-order Runge-Kutta method to solve y' = x + y^2, y(0) = 1. Use h = 0.1 and compute y(0.3).
+
+Problem 10:
+Solve the differential equation y' = e^(-x) + y, y(0) = 0 using the second-order Runge-Kutta method. Take h = 0.2 and find y(0.8).
+
+Note: For each problem, show all steps of the calculation and compare your results with the exact solution if possible. 

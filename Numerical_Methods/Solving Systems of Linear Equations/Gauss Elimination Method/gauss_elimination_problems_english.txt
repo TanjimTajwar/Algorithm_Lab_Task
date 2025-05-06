@@ -1,0 +1,57 @@
+10 Problems on Gauss Elimination Method:
+
+1. Solve the following system of equations using Gauss Elimination method:
+2x + y - z = 8
+-3x - y + 2z = -11
+-2x + y + 2z = -3
+
+2. Solve using Gauss Elimination method:
+x + 2y + 3z = 14
+2x + 5y + 2z = 18
+3x + y + 5z = 20
+
+3. Solve the following system of equations using Gauss Elimination method:
+4x + 3y + 2z = 25
+-2x + 2y + 3z = -10
+3x - 5y + 2z = -4
+
+4. Solve using Gauss Elimination method:
+2x - y + 3z = 9
+x + y + z = 6
+x - y + z = 2
+
+5. Solve the following system of equations using Gauss Elimination method:
+3x + 2y - z = 10
+2x - 2y + 4z = -2
+-x + y/2 - z = -1
+
+6. Solve using Gauss Elimination method:
+x + y + z = 6
+2x + 3y + 4z = 20
+3x + 4y + 5z = 30
+
+7. Solve the following system of equations using Gauss Elimination method:
+2x + 3y - z = 5
+4x + 4y - 3z = 3
+-2x + 3y - z = 1
+
+8. Solve using Gauss Elimination method:
+x + 2y + 3z = 6
+2x + 5y + 2z = 4
+6x - 3y + z = 2
+
+9. Solve the following system of equations using Gauss Elimination method:
+2x - y + 3z = 9
+3x + y + 2z = 11
+x - 3y + 2z = 5
+
+10. Solve using Gauss Elimination method:
+x + y + z = 3
+2x + 3y + z = 6
+3x + 5y + 2z = 11
+
+Note: While solving each problem, follow these steps:
+1. Create the augmented matrix
+2. Perform forward elimination
+3. Perform back substitution
+4. Verify the solution 

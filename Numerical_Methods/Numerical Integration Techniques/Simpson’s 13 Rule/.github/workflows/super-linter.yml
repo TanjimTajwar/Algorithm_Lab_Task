@@ -1,0 +1,49 @@
+name: Super Linter
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  super-linter:
+    name: Lint code base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JAVA_FILE_NAME: .java
+          PYTHON_FILE_NAME: .py
+          VALIDATE_JAVA: true
+          VALIDATE_PYTHON: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_YAML: true
+          VALIDATE_JSON: true
+          VALIDATE_EDITORCONFIG: true
+          VALIDATE_GITHUB_ACTIONS: true
+          VALIDATE_MAKEFILE: true
+          VALIDATE_SHELL_SHFMT: true
+          VALIDATE_DOCKER: true
+          VALIDATE_HTML: true
+          VALIDATE_CSS: true
+          VALIDATE_ENV: true
+          VALIDATE_GO: true
+          VALIDATE_KOTLIN: true
+          VALIDATE_OPENAPI: true
+          VALIDATE_PERL: true
+          VALIDATE_PHP: true
+          VALIDATE_POWERSHELL: true
+          VALIDATE_RUBY: true
+          VALIDATE_SNAKEMAKE: true
+          VALIDATE_TERRAFORM: true
+          VALIDATE_TSX: true
+          VALIDATE_TYPESCRIPT_ES: true
+          VALIDATE_TYPESCRIPT_STANDARD: true
+          VALIDATE_XML: true 

@@ -1,0 +1,48 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Java source files
+*.java text diff=java
+
+# Python source files
+*.py text diff=python
+
+# Documentation
+*.md text diff=markdown
+*.txt text
+*.rst text
+
+# Configs
+*.json text
+*.yml text
+*.yaml text
+*.xml text
+*.properties text
+.editorconfig text
+.gitattributes text
+.gitignore text
+
+# Scripts
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Graphics
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.svg text
+
+# Archives
+*.zip binary
+*.tar.gz binary
+*.rar binary
+*.7z binary
+
+# IDE
+.idea/* text
+.vscode/* text
+*.iml text
+*.ipr text
+*.iws text
+*.sublime-* text 

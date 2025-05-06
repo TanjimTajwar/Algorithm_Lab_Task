@@ -1,0 +1,86 @@
+Gauss-Seidel Iteration Method: 10 Problems
+
+Problem 1:
+Solve the following system of equations using the Gauss-Seidel method:
+4x + y + z = 7
+x + 5y + z = 8
+x + y + 6z = 9
+Initial values: x₀ = 0, y₀ = 0, z₀ = 0
+Tolerance: 0.0001
+
+Problem 2:
+Solve the following system of equations using the Gauss-Seidel method:
+3x - y + z = 4
+-x + 4y + 2z = 5
+x + 2y + 5z = 6
+Initial values: x₀ = 1, y₀ = 1, z₀ = 1
+Tolerance: 0.001
+
+Problem 3:
+Solve the following system of equations using the Gauss-Seidel method:
+5x + 2y - z = 10
+2x + 6y + z = 12
+-x + y + 4z = 8
+Initial values: x₀ = 0, y₀ = 0, z₀ = 0
+Tolerance: 0.0001
+
+Problem 4:
+Solve the following system of equations using the Gauss-Seidel method:
+4x + y - z = 5
+x + 3y + z = 6
+-x + y + 4z = 7
+Initial values: x₀ = 1, y₀ = 1, z₀ = 1
+Tolerance: 0.001
+
+Problem 5:
+Solve the following system of equations using the Gauss-Seidel method:
+6x + y + z = 8
+x + 5y + z = 9
+x + y + 4z = 10
+Initial values: x₀ = 0, y₀ = 0, z₀ = 0
+Tolerance: 0.0001
+
+Problem 6:
+Solve the following system of equations using the Gauss-Seidel method:
+3x + 2y - z = 6
+2x + 4y + z = 7
+-x + y + 5z = 8
+Initial values: x₀ = 1, y₀ = 1, z₀ = 1
+Tolerance: 0.001
+
+Problem 7:
+Solve the following system of equations using the Gauss-Seidel method:
+5x + y + z = 9
+x + 4y + z = 10
+x + y + 3z = 11
+Initial values: x₀ = 0, y₀ = 0, z₀ = 0
+Tolerance: 0.0001
+
+Problem 8:
+Solve the following system of equations using the Gauss-Seidel method:
+4x + 2y - z = 7
+2x + 5y + z = 8
+-x + y + 4z = 9
+Initial values: x₀ = 1, y₀ = 1, z₀ = 1
+Tolerance: 0.001
+
+Problem 9:
+Solve the following system of equations using the Gauss-Seidel method:
+6x + y + z = 10
+x + 5y + z = 11
+x + y + 4z = 12
+Initial values: x₀ = 0, y₀ = 0, z₀ = 0
+Tolerance: 0.0001
+
+Problem 10:
+Solve the following system of equations using the Gauss-Seidel method:
+3x + 2y - z = 8
+2x + 4y + z = 9
+-x + y + 5z = 10
+Initial values: x₀ = 1, y₀ = 1, z₀ = 1
+Tolerance: 0.001
+
+Notes: For each problem:
+1. Use the Gauss-Seidel iteration formula to solve
+2. Write down the values for each iteration
+3. Find the solution according to the given tolerance 

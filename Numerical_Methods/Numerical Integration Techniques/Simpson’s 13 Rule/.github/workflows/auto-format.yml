@@ -1,0 +1,70 @@
+name: Auto Format
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install black isort pylint
+          pip install google-java-format
+
+      - name: Format Python code
+        run: |
+          # Format Python files
+          black .
+          isort .
+          pylint .
+
+      - name: Format Java code
+        run: |
+          # Format Java files
+          find . -name "*.java" -exec google-java-format -i {} \;
+
+      - name: Check formatting
+        run: |
+          # Check Python formatting
+          black . --check
+          isort . --check
+          pylint .
+          
+          # Check Java formatting
+          find . -name "*.java" -exec google-java-format --dry-run {} \;
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'style: auto-format code'
+          title: 'style: auto-format code'
+          body: |
+            This PR contains automatic formatting changes:
+            - Python code formatted with black and isort
+            - Java code formatted with google-java-format
+            - Code style checked with pylint
+          branch: auto-format
+          base: main
+          labels: |
+            automated pr
+            formatting 

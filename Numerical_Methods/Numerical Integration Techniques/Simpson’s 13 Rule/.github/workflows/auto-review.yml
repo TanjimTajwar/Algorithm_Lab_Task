@@ -1,0 +1,82 @@
+name: Auto Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  auto-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.issue;
+            const pr = context.payload.pull_request;
+            
+            // Get changed files
+            const files = await github.rest.pulls.listFiles({
+              owner: issue.owner,
+              repo: issue.repo,
+              pull_number: issue.number
+            });
+            
+            // Check for common issues
+            const issues = [];
+            
+            for (const file of files.data) {
+              // Check file size
+              if (file.changes > 1000) {
+                issues.push(`File ${file.filename} has too many changes (${file.changes}). Consider breaking it into smaller changes.`);
+              }
+              
+              // Check for binary files
+              if (file.filename.match(/\.(png|jpg|gif|pdf|zip|tar|gz)$/i)) {
+                issues.push(`File ${file.filename} appears to be binary. Consider using Git LFS for large files.`);
+              }
+              
+              // Check for sensitive files
+              if (file.filename.match(/\.(env|key|pem|p12|pfx|cer|crt|der)$/i)) {
+                issues.push(`File ${file.filename} appears to contain sensitive information. Please remove it and use environment variables or secrets instead.`);
+              }
+              
+              // Check for generated files
+              if (file.filename.match(/\.(class|pyc|pyo|pyd|so|dll|dylib)$/i)) {
+                issues.push(`File ${file.filename} appears to be generated. Please add it to .gitignore.`);
+              }
+            }
+            
+            // Check commit message
+            const commits = await github.rest.pulls.listCommits({
+              owner: issue.owner,
+              repo: issue.repo,
+              pull_number: issue.number
+            });
+            
+            for (const commit of commits.data) {
+              if (commit.commit.message.length < 10) {
+                issues.push(`Commit ${commit.sha} has a very short message. Please provide more details.`);
+              }
+            }
+            
+            // Add review comment if issues found
+            if (issues.length > 0) {
+              const comment = `I've reviewed your pull request and found some potential issues:\n\n${issues.join('\n')}\n\nPlease address these issues before merging.`;
+              
+              github.rest.pulls.createReview({
+                owner: issue.owner,
+                repo: issue.repo,
+                pull_number: issue.number,
+                body: comment,
+                event: 'REQUEST_CHANGES'
+              });
+            } else {
+              github.rest.pulls.createReview({
+                owner: issue.owner,
+                repo: issue.repo,
+                pull_number: issue.number,
+                body: 'The changes look good! No issues found.',
+                event: 'APPROVE'
+              });
+            } 

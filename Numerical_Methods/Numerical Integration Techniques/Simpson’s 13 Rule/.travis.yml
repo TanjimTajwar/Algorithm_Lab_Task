@@ -1,0 +1,29 @@
+language: java
+python:
+  - "3.8"
+  - "3.9"
+  - "3.10"
+
+jdk:
+  - openjdk8
+  - openjdk11
+  - openjdk17
+
+before_install:
+  - pip install -r requirements.txt
+
+script:
+  - make compile
+  - make run-java
+  - make run-python
+
+after_success:
+  - echo "Build completed successfully!"
+
+notifications:
+  email: false
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - $HOME/.m2 

@@ -1,0 +1,66 @@
+name: Auto Label
+
+on:
+  issues:
+    types: [opened, edited]
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  auto-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.issue;
+            const title = context.payload.issue?.title || context.payload.pull_request?.title || '';
+            const body = context.payload.issue?.body || context.payload.pull_request?.body || '';
+            const isPR = context.payload.pull_request !== undefined;
+            
+            // Define label patterns
+            const labelPatterns = {
+              'bug': ['bug', 'error', 'crash', 'fail', 'broken'],
+              'enhancement': ['feature', 'improve', 'enhance', 'add'],
+              'documentation': ['doc', 'readme', 'comment', 'explain'],
+              'question': ['how', 'what', 'why', 'when', 'where', '?'],
+              'security': ['security', 'vulnerability', 'exploit', 'hack'],
+              'performance': ['slow', 'fast', 'optimize', 'performance'],
+              'testing': ['test', 'unit', 'integration', 'coverage'],
+              'dependencies': ['depend', 'package', 'library', 'module'],
+              'java': ['java', 'jdk', 'jvm'],
+              'python': ['python', 'py', 'numpy']
+            };
+            
+            // Check title and body for patterns
+            const text = (title + ' ' + body).toLowerCase();
+            const labels = new Set();
+            
+            for (const [label, patterns] of Object.entries(labelPatterns)) {
+              if (patterns.some(pattern => text.includes(pattern))) {
+                labels.add(label);
+              }
+            }
+            
+            // Add PR-specific labels
+            if (isPR) {
+              labels.add('pull-request');
+              
+              // Check for draft PR
+              if (context.payload.pull_request.draft) {
+                labels.add('draft');
+              }
+            } else {
+              labels.add('issue');
+            }
+            
+            // Add labels
+            if (labels.size > 0) {
+              github.rest.issues.addLabels({
+                owner: issue.owner,
+                repo: issue.repo,
+                issue_number: issue.number,
+                labels: Array.from(labels)
+              });
+            } 

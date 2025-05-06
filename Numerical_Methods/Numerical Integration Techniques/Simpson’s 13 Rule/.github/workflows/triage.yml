@@ -1,0 +1,70 @@
+name: Issue and PR Triage
+
+on:
+  issues:
+    types: [opened, edited, labeled, unlabeled]
+  pull_request:
+    types: [opened, edited, labeled, unlabeled]
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.issue;
+            const labels = context.payload.issue?.labels || context.payload.pull_request?.labels || [];
+            
+            // Check for missing labels
+            if (labels.length === 0) {
+              github.rest.issues.addLabels({
+                owner: issue.owner,
+                repo: issue.repo,
+                issue_number: issue.number,
+                labels: ['needs-triage']
+              });
+            }
+            
+            // Check for missing description
+            const body = context.payload.issue?.body || context.payload.pull_request?.body || '';
+            if (!body || body.trim() === '') {
+              github.rest.issues.addLabels({
+                owner: issue.owner,
+                repo: issue.repo,
+                issue_number: issue.number,
+                labels: ['needs-description']
+              });
+            }
+            
+            // Check for security issues
+            const title = context.payload.issue?.title || context.payload.pull_request?.title || '';
+            if (title.toLowerCase().includes('security') || body.toLowerCase().includes('security')) {
+              github.rest.issues.addLabels({
+                owner: issue.owner,
+                repo: issue.repo,
+                issue_number: issue.number,
+                labels: ['security']
+              });
+            }
+            
+            // Check for bug reports
+            if (title.toLowerCase().includes('bug') || body.toLowerCase().includes('bug')) {
+              github.rest.issues.addLabels({
+                owner: issue.owner,
+                repo: issue.repo,
+                issue_number: issue.number,
+                labels: ['bug']
+              });
+            }
+            
+            // Check for feature requests
+            if (title.toLowerCase().includes('feature') || body.toLowerCase().includes('feature')) {
+              github.rest.issues.addLabels({
+                owner: issue.owner,
+                repo: issue.repo,
+                issue_number: issue.number,
+                labels: ['enhancement']
+              });
+            } 

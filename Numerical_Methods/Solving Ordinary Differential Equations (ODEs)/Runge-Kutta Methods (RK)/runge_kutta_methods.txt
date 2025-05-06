@@ -1,0 +1,77 @@
+Runge-Kutta Methods in Numerical Analysis
+
+Definition:
+Runge-Kutta methods are a family of iterative methods used to solve ordinary differential equations (ODEs). They are named after German mathematicians Carl Runge and Martin Kutta. These methods are used to approximate solutions of initial value problems of the form:
+    dy/dx = f(x,y), y(x₀) = y₀
+
+Types of Runge-Kutta Methods:
+
+1. First Order Runge-Kutta (Euler's Method):
+   - Simplest form of Runge-Kutta method
+   - Formula: yₙ₊₁ = yₙ + hf(xₙ, yₙ)
+   - Error: O(h)
+
+2. Second Order Runge-Kutta (RK2):
+   - Also known as the midpoint method
+   - Formulas:
+     k₁ = hf(xₙ, yₙ)
+     k₂ = hf(xₙ + h, yₙ + k₁)
+     yₙ₊₁ = yₙ + (k₁ + k₂)/2
+   - Error: O(h²)
+
+3. Third Order Runge-Kutta (RK3):
+   - Formulas:
+     k₁ = hf(xₙ, yₙ)
+     k₂ = hf(xₙ + h/2, yₙ + k₁/2)
+     k₃ = hf(xₙ + h, yₙ - k₁ + 2k₂)
+     yₙ₊₁ = yₙ + (k₁ + 4k₂ + k₃)/6
+   - Error: O(h³)
+
+4. Fourth Order Runge-Kutta (RK4):
+   - Most commonly used method
+   - Formulas:
+     k₁ = hf(xₙ, yₙ)
+     k₂ = hf(xₙ + h/2, yₙ + k₁/2)
+     k₃ = hf(xₙ + h/2, yₙ + k₂/2)
+     k₄ = hf(xₙ + h, yₙ + k₃)
+     yₙ₊₁ = yₙ + (k₁ + 2k₂ + 2k₃ + k₄)/6
+   - Error: O(h⁴)
+
+How to Solve Using Runge-Kutta Methods:
+
+1. Identify the differential equation and initial conditions
+2. Choose the appropriate Runge-Kutta method based on required accuracy
+3. Select a step size (h)
+4. For each step:
+   a. Calculate the k values using the formulas
+   b. Update the y value using the final formula
+   c. Move to the next x value
+5. Continue until reaching the target x value
+
+Advantages:
+- Self-starting (no need for previous points)
+- Easy to implement
+- Good accuracy, especially RK4
+- Can handle both linear and nonlinear ODEs
+
+Disadvantages:
+- Computationally more expensive than simpler methods
+- May require smaller step sizes for stiff equations
+- Error accumulation over many steps
+
+Example Problem:
+Solve y' = x + y, y(0) = 1 using RK4 method with h = 0.1 to find y(0.5)
+
+Solution Steps:
+1. For x₀ = 0, y₀ = 1:
+   k₁ = 0.1 * (0 + 1) = 0.1
+   k₂ = 0.1 * (0.05 + 1.05) = 0.11
+   k₃ = 0.1 * (0.05 + 1.055) = 0.1105
+   k₄ = 0.1 * (0.1 + 1.1105) = 0.12105
+   y₁ = 1 + (0.1 + 2*0.11 + 2*0.1105 + 0.12105)/6 = 1.11034
+
+2. Continue this process until x = 0.5
+
+The exact solution is y = 2e^x - x - 1, which can be used to verify the accuracy of the numerical solution.
+
+Note: The step size (h) should be chosen carefully. A smaller h gives better accuracy but requires more computations. A larger h is faster but may give less accurate results. 

@@ -1,0 +1,78 @@
+Regular Falsi Method
+
+Definition:
+The Regular Falsi Method is a numerical method used to find the root of an equation. It is an iterative method and an improved version of the Bolzano method.
+
+Equation:
+xᵣ = x₁ - f(x₁)(x₂-x₁)/(f(x₂)-f(x₁))
+
+Where:
+- xᵣ is the new estimated root
+- x₁ and x₂ are two initial points
+- f(x) is the original equation
+
+Solution Method:
+1. First, choose two points x₁ and x₂ where f(x₁) and f(x₂) have opposite signs
+2. Use the above equation to find xᵣ
+3. Calculate f(xᵣ)
+4. If f(xᵣ) = 0, then xᵣ is the root
+5. If f(xᵣ) ≠ 0, then:
+   - If f(xᵣ) and f(x₁) have the same sign, then x₁ = xᵣ
+   - If f(xᵣ) and f(x₂) have the same sign, then x₂ = xᵣ
+6. Repeat from step 2 until the desired accuracy is achieved
+
+Problem 1:
+Equation: x³ - 2x - 5 = 0
+Initial interval: [2, 3]
+Accuracy: 0.0001
+
+Problem 2:
+Equation: x² - 4 = 0
+Initial interval: [1, 3]
+Accuracy: 0.0001
+
+Problem 3:
+Equation: sin(x) - x/2 = 0
+Initial interval: [1, 2]
+Accuracy: 0.0001
+
+Problem 4:
+Equation: e^x - 3x = 0
+Initial interval: [0, 1]
+Accuracy: 0.0001
+
+Problem 5:
+Equation: x³ + x - 1 = 0
+Initial interval: [0, 1]
+Accuracy: 0.0001
+
+Problem 6:
+Equation: cos(x) - x = 0
+Initial interval: [0, π/2]
+Accuracy: 0.0001
+
+Problem 7:
+Equation: x⁴ - x - 10 = 0
+Initial interval: [1, 2]
+Accuracy: 0.0001
+
+Problem 8:
+Equation: ln(x) + x - 2 = 0
+Initial interval: [1, 2]
+Accuracy: 0.0001
+
+Problem 9:
+Equation: x³ - 3x + 1 = 0
+Initial interval: [0, 1]
+Accuracy: 0.0001
+
+Problem 10:
+Equation: tan(x) - x = 0
+Initial interval: [4, 5]
+Accuracy: 0.0001
+
+Steps to solve each problem:
+1. Write the given equation in the form f(x) = 0
+2. Calculate f(x) values at the initial interval
+3. Use the Regular Falsi method formula to iterate
+4. Continue iteration until the desired accuracy is achieved 

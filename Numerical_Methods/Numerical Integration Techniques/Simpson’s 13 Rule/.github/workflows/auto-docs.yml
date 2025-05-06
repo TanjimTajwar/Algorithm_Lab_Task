@@ -1,0 +1,68 @@
+name: Auto Docs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install sphinx sphinx-rtd-theme
+
+      - name: Build documentation
+        run: |
+          cd docs
+          make html
+
+      - name: Check documentation
+        run: |
+          # Check for broken links
+          python -m sphinx.ext.intersphinx docs/_build/html/objects.inv
+          
+          # Check for missing docstrings
+          python -m pydocstyle .
+          
+          # Check for documentation coverage
+          python -m docstr_coverage .
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/_build/html
+          publish_branch: gh-pages
+
+      - name: Comment on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.issue;
+            const comment = `Documentation check completed!
+            - Documentation built successfully
+            - No broken links found
+            - Docstring coverage requirements met
+            - Documentation will be deployed to GitHub Pages after merge`;
+            
+            github.rest.issues.createComment({
+              owner: issue.owner,
+              repo: issue.repo,
+              issue_number: issue.number,
+              body: comment
+            }); 
