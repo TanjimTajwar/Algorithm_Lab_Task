@@ -1,0 +1,5 @@
+n = int(input())
+a = list(map(int, input().split()))
+max_welfare = max(a)
+total_spent = sum(max_welfare - x for x in a)
+print(total_spent)

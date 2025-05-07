@@ -1,0 +1,50 @@
+
+numerical lab MAT432
+lab 1
+
+1)
+Write Python code in ```Jupyter notebook```
+
+Solve the following system of linear equations:
+3a - 4b + c + 5d = 7
+a + 3b - 2c = -5d + 12
+-2a + 2c = 3b - 2d + 2
+-a + 5b = -3c - 4d + 17
+
+Show the solution in the following form:
+a = _, b = _, c = _, d = _
+
+For extra credit, show the solution for a problem with the coefficients generated randomly.
+
+2)
+Write a Python program that implements a variant of the bisection method where you make a partition of the search bracket with three sections instead of two. You may go for a balanced partition (with equal sized sections) or preferably, set the partition points uniformly at random resulting in random lengths of the three sections. Compare the steps/iterations taken in this procedure with that taken by the vanilla procedure (i.e. the usual bisection method).
+
+Demonstrate your work with the following two equations:
+a) x * sin^2(x) - e^x + 5 = 0
+b) x^2 * cos(x) - x^3 + 5 = 0
+
+Start with the brackets [-2, 3] or [-1, 3]. Have a tolerance equivalent to producing accuracy of third or fourth decimal places.
+
+For extra credit, also find the solutions of the two equations using fixed-point iteration.
+
+3)
+Write a program that generates 30k or so floating point random numbers. Do so, preferably, to have both large and small numbers (i.e., a wide range). Then produce the following three sums:
+a) adding in that generated sequence,
+b) in increasing sequence, and
+c) in decreasing sequence
+
+You can have a naive algorithm for the last two; Kahan’s algorithm or heap-based implementation for best possible accuracy is not necessary in this particular task.
+
+Show/compare these three sums.
+
+Now take a floating point number as input from the user and report the percentile rank that this number has within the generated numbers.
+
+For instance, if the generated numbers are as follows:
+1.2, 0.5, 1.8, 2.5, 0.2, 1.5
+
+And the number given as input is 1.9, the expected output will be 83.33%. The interpretation is that 83.33% of the generated numbers are below the given input value 1.9.
+
+If you are using a directly useful library function, for full credit, also show a version where you do calculation from scratch. (Use Kahan’s algorithm)
+
+lab 2 Question 20Jun23
+https://prnt.sc/uWWVxRotcJfc

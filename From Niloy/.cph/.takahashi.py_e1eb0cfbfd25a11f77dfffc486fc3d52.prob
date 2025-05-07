@@ -1,0 +1,1 @@
+{"name":"Local: takahashi","url":"c:\\Users\\ruhan\\Downloads\\Algo_python\\takahashi.py","tests":[{"id":1745068399257,"input":"6\n1 3\n1 1\n1 15\n2\n1 3\n2\n","output":"3\n1\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\ruhan\\Downloads\\Algo_python\\takahashi.py","group":"local","local":true}
